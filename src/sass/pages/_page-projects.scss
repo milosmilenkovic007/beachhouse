@@ -1,0 +1,9 @@
+.page-list.page-projects {
+	@media #{$tabletDown} {
+		.module-two-thumbs {
+			.col-xs-12:first-child {
+				margin-bottom: 60px;
+			}
+		}
+	}
+}

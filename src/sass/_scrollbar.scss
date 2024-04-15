@@ -1,0 +1,119 @@
+// &::-webkit-scrollbar-button       {}
+// &::-webkit-scrollbar-track        {}
+// &::-webkit-scrollbar-track-piece  {}
+// &::-webkit-scrollbar-corner       {}
+// &::-webkit-resizer                {}
+
+//$foregroundColor: rgba(11, 30, 64, .25);
+//$backgroundColor: #365265;
+$borderRadius: 0;
+//$trackColor: #365265;
+//$thumbColor: #2c465d;
+
+@mixin scrollbar($trackColor: #365265, $thumbColor: #2c465d, $backgroundColor: #365265) {
+	scrollbar-face-color: #e3dfcb;
+	scrollbar-arrow-color: #e3dfcb;
+	scrollbar-track-color: #f5f2e5;
+	scrollbar-shadow-color: #e3dfcb;
+	scrollbar-highlight-color: #e3dfcb;
+	scrollbar-3dlight-color: #e3dfcb;
+	scrollbar-darkshadow-color: #e3dfcb;
+
+	//&::-webkit-scrollbar{
+	//	width:6px;
+	//	background: $backgroundColor;
+	//}
+	&::-webkit-scrollbar {
+		width: 3px;
+		//-webkit-border-radius: 10px;
+		//-moz-border-radius: 10px;
+		//border-radius: 10px;
+		background: $backgroundColor;
+		// width: 0;
+		// @include transition(width .3s);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $thumbColor;
+	}
+
+	&::-webkit-scrollbar-corner {
+		background: $trackColor;
+	}
+
+	// &:hover{
+	// 	&::-webkit-scrollbar {
+	// 		width: 6px;
+	// 	}
+	// }
+
+	&::-webkit-scrollbar-track {
+		background: $trackColor;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		//border: 1px solid $thumbBorderColor;
+		// background: $foregroundColor;
+		//background: #2c465d;
+		border-radius: $borderRadius;
+		@include transition(background 0.3s);
+		&:hover {
+			background: hsla(0, 0%, 0%, 0.3) !important;
+		}
+	}
+
+	&:hover {
+		&::-webkit-scrollbar-thumb {
+			background: $thumbColor;
+		}
+	}
+}
+
+@mixin custom-scrollbar($_trackColor, $_thumbColor) {
+	$trackColor: $_trackColor;
+	$thumbColor: $_thumbColor;
+	@include scrollbar($trackColor, $thumbColor);
+}
+
+@mixin invisible-scrollbar() {
+	$backgroundColor: hsla(0, 0%, 100%, 0);
+	$foregroundColor: hsla(0, 0%, 100%, 0);
+	$thumbBorderColor: hsla(0, 0%, 100%, 0);
+	@include scrollbar;
+}
+
+@mixin light-scrollbar() {
+	// $backgroundColor: fade-out(black,.95);
+	$backgroundColor: white;
+	$foregroundColor: #cdcdcd;
+	// $thumbBorderColor: fade-out(black,.95);
+	$thumbBorderColor: white;
+	@include scrollbar;
+}
+
+@mixin dark-scrollbar() {
+	$backgroundColor: white;
+	$foregroundColor: hsla(0, 0%, 0%, 0.15);
+	$thumbBorderColor: white;
+	@include scrollbar;
+	html.touch & {
+		display: none;
+	}
+}
+
+%light-scrollbar {
+	@include light-scrollbar();
+	html.touch & {
+		display: none;
+	}
+}
+
+%dark-scrollbar {
+	@include dark-scrollbar();
+	html.touch & {
+		display: none;
+	}
+}

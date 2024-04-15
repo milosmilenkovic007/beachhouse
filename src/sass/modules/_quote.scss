@@ -1,0 +1,73 @@
+.module-quote {
+	.heading-03,
+	p,
+	a {
+		width: 100%;
+		display: inline-block;
+	}
+
+	.heading-03 {
+		font-family: $font-gotham;
+		font-weight: $font-weight-bold;
+		font-size: 13px;
+		line-height: 17px;
+		margin: 0 0 15px;
+	}
+
+	.link-cta {
+		margin-top: 10px;
+
+		&:after {
+			line-height: 17px;
+		}
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 21px;
+		font-family: $font-berlingske-serif;
+	}
+
+	a {
+		text-decoration: none !important;
+		text-align: left;
+		padding: 0;
+		width: auto;
+		//font-size: 13px;
+		//line-height: 17px;
+		font-weight: $font-weight-medium;
+
+		&:after {
+			line-height: 17px;
+			margin: 0;
+		}
+	}
+
+	@media #{$desktopUp} {
+		.heading-03 {
+			font-size: 18px;
+			line-height: 26px;
+			margin: 0 0 20px;
+		}
+
+		.link-cta {
+			margin-top: 25px;
+		}
+
+		p {
+			font-size: 28px;
+			line-height: 38px;
+			max-width: 80%;
+		}
+
+		a {
+			//font-size: 12px;
+			//line-height: 34px;
+			margin: 0;
+
+			&:after {
+				line-height: 34px;
+			}
+		}
+	}
+}

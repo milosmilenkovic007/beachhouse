@@ -1,0 +1,56 @@
+/* Fixes SVGs that are usually used for icons and have fixed dimensions. */
+.attachment-266x266,
+.thumbnail img {
+	width: 100% !important;
+	height: auto !important;
+}
+
+.post-type-employee .column-image {
+	width: 150px;
+}
+
+.post-type-employee .column-taxonomy-employee_position {
+	width: 20%;
+}
+
+.post-type-employee .column-office {
+	width: 20%;
+}
+
+/** Make ACF Relation field's list with responsive height that matches height of the selections */
+.acf-field-relationship .acf-relationship .selection {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	flex-wrap: nowrap;
+}
+
+.acf-field-relationship .acf-relationship .choices {
+	position: relative;
+	overflow: hidden;
+}
+
+.acf-field-relationship .acf-relationship .choices-list {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.acf-field-relationship .acf-relationship .values-list {
+	min-height: 160px;
+	height: auto;
+}
+
+.acfml-field-copied .wpml_acf_original_value {
+	display: none !important;
+}
+
+#icl_menu_language,
+#icl_menu_translation_of,
+#menu-name {
+	margin-left: 0 !important;
+}

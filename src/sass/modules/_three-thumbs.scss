@@ -1,0 +1,28 @@
+.module-three-thumbs {
+	.thumb {
+		margin-bottom: 48px;
+
+		&:nth-child(3n + 1) {
+			clear: left;
+		}
+	}
+
+	.text-in-md-thumb {
+		.heading-05 {
+			font-size: 16px;
+			line-height: 17px;
+		}
+	}
+
+	@media #{$tabletDown} {
+	}
+
+	@media #{$desktopUp} {
+		.text-in-md-thumb {
+			.heading-05 {
+				font-size: 18px;
+				line-height: 26px;
+			}
+		}
+	}
+}

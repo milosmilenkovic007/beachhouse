@@ -1,0 +1,15 @@
+<svg id="icon-landbrug" enable-background="new -564 389.9 62 62" version="1.1" viewBox="-564 389.9 62 62" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	#icon-landbrug .st0{fill:#FFFFFF;stroke:currentColor;stroke-width:2;stroke-miterlimit:10;}
+	#icon-landbrug .st1{fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-miterlimit:10;}
+	#icon-landbrug .st2{fill:#FFFFFF;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<circle class="st0" cx="-533" cy="420.9" r="29"/>
+<line class="st1" x1="-533.5" x2="-533.5" y1="405.3" y2="436.6"/>
+<path class="st2" d="m-539 409.9s5.5 1.3 5.5 4.5v3.7c-2.8 0.1-5.2-2-5.5-4.8v-8.5"/>
+<path class="st2" d="m-539 416.6s5.5 1.3 5.5 4.4v3.6c-2.8 0.1-5.2-1.9-5.5-4.7v-3.3"/>
+<path class="st2" d="m-527.9 416.6s-5.5 1.3-5.5 4.4v3.6c2.8 0.1 5.2-1.9 5.5-4.7v-3.3"/>
+<path class="st2" d="m-527.9 423.1s-5.5 1.3-5.5 4.4v3.6c2.8 0.1 5.2-1.9 5.5-4.7v-3.3"/>
+<path class="st2" d="m-539 423.1s5.5 1.3 5.5 4.4v3.6c-2.8 0.1-5.2-1.9-5.5-4.7v-3.3"/>
+<path class="st2" d="m-527.9 409.9s-5.5 1.3-5.5 4.5v3.7c2.8 0.1 5.2-2 5.5-4.8v-8.5"/>
+</svg>

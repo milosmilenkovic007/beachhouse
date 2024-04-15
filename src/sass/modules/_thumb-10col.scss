@@ -1,0 +1,38 @@
+.module-thumb_10col {
+	.wrap-text {
+		&.col-md-offset-2 {
+			text-align: center;
+		}
+	}
+
+	.text-in-md-thumb {
+		.heading-05 {
+			font-size: 16px;
+			line-height: 17px;
+		}
+	}
+
+	@media #{$tabletDown} {
+	}
+
+	@media #{$desktopUp} {
+		.wrap-text {
+			.text-in-md-thumb {
+				max-width: 630px;
+			}
+			&.col-md-offset-2 {
+				.text-in-md-thumb {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+
+		.text-in-md-thumb {
+			.heading-05 {
+				font-size: 18px;
+				line-height: 26px;
+			}
+		}
+	}
+}

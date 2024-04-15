@@ -1,0 +1,43 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1" display-as-translated="1" >employee</custom-type>
+        <custom-type translate="1" >office</custom-type>
+        <custom-type translate="1" >service</custom-type>
+        <custom-type translate="1" >page</custom-type>
+        <custom-type translate="1" >post</custom-type>
+        <custom-type translate="1" >sector</custom-type>
+        <custom-type translate="1" >project</custom-type>
+        <custom-type translate="0" >acf-field-group</custom-type>
+        <custom-type translate="0" >acf-taxonomy</custom-type>
+        <custom-type translate="0" >acf-post-type</custom-type>
+        <custom-type translate="0" >acf-ui-options-page</custom-type>
+        <custom-type translate="0" >wp_global_styles</custom-type>
+        <custom-type translate="0" >user_request</custom-type>
+        <custom-type translate="0" >oembed_cache</custom-type>
+        <custom-type translate="0" >customize_changeset</custom-type>
+        <custom-type translate="0" >custom_css</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1" display-as-translated="1">employee_position</taxonomy>
+    </taxonomies>
+    <custom-fields>
+        <custom-field action="copy-once">modules</custom-field>
+        <custom-field action="copy">employee_email</custom-field>
+        <custom-field action="copy">employee_image</custom-field>
+        <custom-field action="copy">employee_office</custom-field>
+        <custom-field action="copy">employee_phone</custom-field>
+        <custom-field action="copy">employee_positions</custom-field>
+        <custom-field action="copy-once">hero_text</custom-field>
+        <custom-field action="copy-once">hero_type</custom-field>
+        <custom-field action="copy-once">hero_vertical_text</custom-field>
+        <custom-field action="copy-once">hero_email</custom-field>
+        <custom-field action="copy-once">hero_is_narrow</custom-field>
+        <custom-field action="copy-once">hero_opening_hours</custom-field>
+        <custom-field action="copy-once">hero_phone</custom-field>
+        <custom-field action="copy-once">hero_slides</custom-field>
+        <custom-field action="copy">office_address</custom-field>
+        <custom-field action="copy">office_email</custom-field>
+        <custom-field action="copy">office_map_link</custom-field>
+        <custom-field action="copy">office_phone</custom-field>
+    </custom-fields>
+</wpml-config>

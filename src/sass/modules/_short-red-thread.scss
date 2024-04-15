@@ -1,0 +1,114 @@
+.short-red-thread-module {
+	min-height: 450px;
+	//padding-top: 450/320 * 100%;
+	//background-color: $brand-primary;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.content {
+		min-width: 240px;
+		text-align: center;
+		color: #ffffff;
+		position: relative;
+
+		//@include posa(-50%, auto, auto, -50%);
+		//@include transform(translate(50%, 50%));
+
+		.service-icon {
+			display: block;
+			text-align: center;
+			img {
+				width: 39px;
+			}
+		}
+
+		h3 {
+			font-family: $font-gotham;
+			font-weight: $font-weight-bold;
+			font-size: 20px;
+			margin: 0;
+			margin-top: 17px;
+		}
+
+		p {
+			font-size: 13px;
+			margin: 0;
+			margin-top: 15px;
+		}
+	}
+
+	// Style of Det åbne land
+	.forceBg {
+		background: $red-dark;
+		@include posa(0, 0, 0, 0);
+		&-1,
+		&-2 {
+			@include posa(0, 0, 0, 0);
+			width: 100%;
+			height: 100%;
+			background-position: center bottom;
+			background-size: auto 450px;
+			background-repeat: repeat-x;
+		}
+		//background: rgba(blue, 0.2);
+	}
+
+	@media #{$tabletDown} {
+		.forceBg {
+			&-1 {
+				display: none;
+			}
+		}
+
+		.content {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+
+	@media #{$desktopUp} {
+		//max-width: 1016px;
+		//max-width: 1024px;
+		//min-height: 590px;
+		min-height: 650px;
+		//padding-top: 590/1024 * 100%;
+		.forceBg {
+			&-2 {
+				display: none;
+			}
+
+			&-1 {
+				background-size: auto 650px;
+			}
+		}
+		.content {
+			max-width: 540px;
+			h3 {
+				font-size: 32px;
+				margin-top: 26px;
+			}
+			p {
+				font-size: 18px;
+				line-height: 25px;
+				margin-top: 18px;
+			}
+			.service-icon img {
+				width: 60px;
+			}
+		}
+	}
+	@media #{$desktopXLargeUp} {
+		//min-height: 800px;
+		//max-width: 1440px;
+		//padding-top: 650/1440 * 100%;
+		//max-width: 1440px;
+		.content {
+			max-width: 740px;
+			h3 {
+				margin-top: 21px;
+			}
+		}
+	}
+}

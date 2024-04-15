@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 62 62" style="enable-background:new 0 0 62 62;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#CC0000;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#CC0000;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:#CC0000;}
+</style>
+<title>Broer, jernbaner, veje-icon</title>
+<circle class="st0" cx="31" cy="31.2" r="29"/>
+<g>
+	<circle class="st1" cx="24.1" cy="19" r="3.5"/>
+	<line class="st1" x1="24.1" y1="11.6" x2="24.1" y2="13.1"/>
+	<line class="st1" x1="18.9" y1="13.8" x2="20" y2="14.8"/>
+	<line class="st1" x1="16.8" y1="19" x2="18.3" y2="19"/>
+	<line class="st1" x1="18.9" y1="24.2" x2="20" y2="23.1"/>
+	<line class="st1" x1="24.1" y1="26.3" x2="24.1" y2="24.9"/>
+	<line class="st1" x1="29.4" y1="24.2" x2="28.3" y2="23.1"/>
+	<line class="st1" x1="31.5" y1="19" x2="30" y2="19"/>
+	<line class="st1" x1="29.4" y1="13.8" x2="28.3" y2="14.8"/>
+</g>
+<path class="st2" d="M48.6,44c-0.1,0.2-0.3,0.3-0.5,0.3H35.8v2.4h2.1c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.3,0.6-0.6,0.6H24
+	c-0.3,0-0.6-0.3-0.6-0.6c0-0.3,0.3-0.6,0.6-0.6h2v-2.4H13.7c-0.3,0-0.6-0.3-0.6-0.6c0-0.1,0-0.2,0.1-0.3l7.3-13
+	c0.1-0.2,0.3-0.3,0.5-0.3h19.9c0.2,0,0.4,0.1,0.5,0.3l7.3,13C48.7,43.6,48.7,43.8,48.6,44z M42.1,34.2h-4.7l0.8,2.9h5.5L42.1,34.2z
+	 M36.6,31.3l0.5,1.7h4.4l-1-1.7H36.6z M31.5,33h4.4l-0.5-1.7h-3.9V33z M31.5,37.1H37l-0.8-2.9h-4.8V37.1z M25.9,33h4.4v-1.7h-3.9
+	L25.9,33z M25.6,34.2l-0.8,2.9h5.6v-2.9L25.6,34.2z M20.3,33h4.4l0.5-1.7h-3.9L20.3,33z M18,37.1h5.5l0.8-2.9h-4.7L18,37.1z
+	 M21.8,43.1l1.4-4.9h-5.8l-2.7,4.8L21.8,43.1z M30.3,43.1v-4.9h-5.9l-1.4,4.8L30.3,43.1z M34.6,44.3h-7.4v2.4h7.5L34.6,44.3z
+	 M38.7,43.1l-1.4-4.8h-5.9v4.8H38.7z M47.1,43.1l-2.7-4.8h-5.8l1.4,4.8L47.1,43.1z"/>
+</svg>

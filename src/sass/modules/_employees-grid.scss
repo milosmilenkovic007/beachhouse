@@ -1,0 +1,171 @@
+.l-employee .title-wrap-rotate {
+    left: 105px;
+    margin-top: -80px;
+    left: 90%;
+}
+
+	.about-side {
+	color: #fff;
+   
+    font-family: "Berlingske Serif";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;  
+}
+.l-employee .about-side {left:-90%;} 
+
+.module-employees-grid {
+	&.l-employee {
+	  > .container-fluid {
+		> .row {
+		  padding: 100px 0 60px;
+		  left: 50%;
+		}
+	  }
+	}
+  }
+  
+
+.module-employees-grid {
+	background-color: #000;
+	> .container-fluid {
+		background-color: #0e1f33;
+		position: relative;
+		margin-top: 60px;
+		padding-bottom: 60px;
+		overflow: visible;
+		line-height: normal;
+		font-size: 0;
+
+		h2 {
+			line-height: normal;
+			font-weight: $font-weight-regular;
+			font-family: $font-berlingske-serif;
+		}
+
+		.btn-cta {
+			font-size: 13px;
+			line-height: 45px;
+			font-weight: $font-weight-bold;
+			text-decoration: none;
+			border-color: #fff;
+			font-family: $font-seanor;
+
+			&:hover {
+				background-color: #fff;
+				color: #000;
+			}
+		}
+
+		.people {
+			.person {
+				margin-bottom: 35px;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		.text-in-md-thumb {
+			.heading-05 {
+				font-size: 16px;
+				line-height: 17px;
+			}
+		}
+
+		@media #{$tabletDown} {
+			.people {
+				margin-left: #{-$grid-gutter-mobile-width/2};
+				margin-right: #{-$grid-gutter-mobile-width/2};
+
+				.person {
+					padding-left: #{$grid-gutter-mobile-width/2};
+					padding-right: #{$grid-gutter-mobile-width/2};
+				}
+			}
+		}
+
+		@media #{$mobileOnly} {
+			h2 {
+				font-size: 28px;
+				line-height: 38px;
+				margin-top: -18px;
+			}
+
+			.people {
+				.person {
+					&:nth-of-type(2n + 1) {
+						clear: left;
+					}
+				}
+			}
+		}
+
+		@media #{$tabletUp} {
+			margin-top: 120px;
+			padding-bottom: 0;
+
+			> .row {
+				position: relative;
+				padding: 70px 0 0;
+
+				.col-xs-12 {
+					position: static;
+				}
+			}
+
+			h2 {
+				font-size: 40px;
+			}
+
+			.btn-cta {
+				margin-top: 20px;
+				margin-bottom: 90px;
+			}
+
+			.people {
+				.person {
+					&:nth-of-type(3n + 1) {
+						clear: left;
+					}
+				}
+			}
+		}
+
+		@media #{$desktopUp} {
+			> .row {
+				padding: 100px 0 60px;
+			}
+
+			h2 {
+				font-size: 50px;
+			}
+
+			.btn-cta {
+				margin-bottom: 40px;
+			}
+
+			.people {
+				.person {
+					margin-bottom: 75px;
+
+					&:nth-of-type(3n + 1) {
+						clear: inherit;
+					}
+
+					&:nth-of-type(4n + 1) {
+						clear: left;
+					}
+				}
+			}
+
+			.text-in-md-thumb {
+				.heading-05 {
+					font-size: 18px;
+					line-height: 26px;
+				}
+			}
+		}
+	}
+}
