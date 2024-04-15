@@ -1,0 +1,370 @@
+#footer {
+	background-color: #000000;
+	a {
+		text-decoration: none;
+		cursor: pointer;
+
+		&.logo {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+
+			img {
+				width: 60px;
+			}
+		}
+	}
+
+	.row {
+		> .col-md-6 {
+			color: #ffffff;
+			font-family: $font-gotham;
+			font-weight: $font-weight-bold;
+
+			&:first-child {
+				background: $black-dark;
+			}
+			&:last-child {
+				background: #000000;
+			}
+
+			.heading-04 {
+				font-family: $font-gotham;
+				font-weight: $font-weight-bold;
+				font-size: 15px;
+				line-height: 16px;
+				text-transform: uppercase;
+				margin: 0;
+			}
+			p {
+				font-weight: $font-weight-book;
+				font-size: 13px;
+				line-height: 17px;
+				margin: 0;
+				padding-top: 14px;
+			}
+			.btn-cta {
+				margin-top: 25px;
+			}
+		}
+	}
+
+	.icon-linkedin,
+	.icon-youtube {
+		opacity: 0.35;
+		display: inline-block;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.icon-linkedin {
+		width: 23px;
+		margin-right: 14px;
+	}
+
+	.icon-youtube {
+		width: 24px;
+	}
+
+	.footer-bottom-support {
+		background: $gray-background;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+
+				a {
+					font-size: 13px;
+					line-height: 17px;
+					font-weight: $font-weight-demibold;
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		background: $black-dark;
+		padding: 28px 20px 20px;
+		.brand {
+			font-weight: $font-weight-bold;
+			font-size: 13px;
+			line-height: 17px;
+		}
+		.address {
+			font-weight: $font-weight-book;
+			font-size: 13px;
+			line-height: 17px;
+		}
+
+		.left-content,
+		.right-content {
+			display: inline-block;
+		}
+
+		.left-content * {
+			display: block;
+		}
+
+		.left-content {
+			span {
+				a {
+					span {
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		.right-content > * {
+			display: inline-block;
+		}
+
+		a[href*='tel'],
+		a[href*='mailto'] {
+			font-weight: $font-weight-medium;
+			color: #ffffff;
+		}
+
+		.sub-link {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: none;
+
+			li {
+				display: inline-block;
+
+				a {
+					font-size: 13px;
+					line-height: 17px;
+					font-weight: $font-weight-demibold;
+
+					&:hover {
+						color: $brand-primary;
+					}
+				}
+			}
+
+			@media #{$tabletDown} {
+				&.mobile {
+					display: inline-block;
+					width: 100%;
+					padding: 4px 0 20px;
+				}
+			}
+
+			@media #{$desktopUp} {
+				&.desktop {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	// @media screen and (min-width: 1024px) and (max-width: 1280px){
+	// @media screen and (min-width: 1024px) and (max-width: 1400px){
+	@media screen and (min-width: 1024px) and (max-width: 1580px) {
+		.right-content {
+			width: 100%;
+			margin-top: 20px;
+
+			.sub-link {
+				float: left;
+			}
+		}
+	}
+
+	@media #{$tabletDown} {
+		.container-fluid {
+			.row {
+				//margin-left: -$container-padding;
+				//margin-right: -$container-padding;
+				> .col-md-6 {
+					padding: 60px $grid-gutter-mobile-width;
+				}
+			}
+		}
+
+		.footer-bottom-support {
+			padding: 32px 20px 20px;
+
+			ul {
+				li {
+					display: block;
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		.footer-bottom {
+			a[href*='tel'],
+			a[href*='mailto'] {
+				padding: 12px 20px;
+				text-align: center;
+				background: #cfcfcf;
+				margin-bottom: 10px;
+				margin-top: 10px;
+				display: block;
+			}
+			a[href*='tel'] {
+				margin-top: 23px;
+			}
+
+			.logo {
+				position: relative;
+				top: 0;
+				transform: translate(0);
+				margin-bottom: 20px;
+			}
+
+			.left-content {
+				width: 100%;
+				> span {
+					display: block;
+					span {
+						display: inline-block;
+					}
+				}
+			}
+
+			.right-content {
+				margin-top: 30px;
+			}
+
+			.sub-link {
+				li {
+					display: block;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	@media #{$desktopUp} {
+		.row.full {
+			display: flex;
+		}
+
+		.row .col-md-6 {
+			padding: 96px $grid-gutter-width;
+			.heading-04 {
+				font-size: 18px;
+				line-height: 28px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 20px;
+			}
+			.btn-cta {
+				a {
+					font-size: 14px;
+					line-height: 34px;
+				}
+			}
+		}
+
+		.footer-bottom-support {
+			padding: 28px 20px 10px;
+
+			ul {
+				li {
+					~ li {
+						&:before {
+							content: '·';
+							display: inline-block;
+							vertical-align: middle;
+							padding: 0 10px;
+							font-size: 13px;
+							line-height: 17px;
+						}
+					}
+				}
+			}
+		}
+
+		.footer-bottom {
+			.left-content {
+				display: block;
+				text-align: left;
+				* {
+					display: inline-block;
+					font-size: 12px;
+					line-height: 20px;
+					vertical-align: bottom;
+					color: $white-full;
+				}
+
+				> span {
+					&:after {
+						display: inline-block;
+						content: '·';
+						padding: 0 10px;
+					}
+					&:last-child {
+						&:after {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.right-content {
+				position: relative;
+				text-align: center;
+				display: flex;
+				justify-content: end;
+				white-space: nowrap;
+				width: 100%;
+				margin-top: 20px;
+
+				.sub-link {
+					float: none;
+				}
+
+				> [class^='icon-'] {
+					// position: absolute;
+					position: relative;
+					top: -4rem;
+					flex-basis: 23px;
+					a {
+						display: inline-block;
+						width: 23px;
+						margin: 0 !important;
+						padding: 0;
+					}
+				}
+			}
+
+			.sub-link {
+				margin-right: 0;
+				justify-self: flex-start;
+				flex-basis: calc(100% - 120px);
+
+				li {
+					~ li {
+						&:before {
+							content: '·';
+							display: inline-block;
+							vertical-align: middle;
+							padding: 0 10px;
+							font-size: 13px;
+							line-height: 17px;
+						}
+					}
+				}
+			}
+
+			a[href*='tel'],
+			a[href*='mailto'] {
+				font-weight: $font-weight-book;
+			}
+		}
+	}
+}

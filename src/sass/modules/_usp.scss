@@ -1,0 +1,87 @@
+.md-usp {
+	background-color: $gray-background;
+	padding-top: 40px;
+	padding-bottom: 50px;
+
+	&.red-background {
+		background-color: $link-active-color;
+		color: white;
+	}
+
+	&,
+	p {
+		font-size: 15px;
+		line-height: 1.4;
+	}
+
+	h2 {
+		font-size: 38px;
+		line-height: 38px;
+		margin-top: 0;
+		margin-bottom: 40px;
+		font-weight: $font-weight-regular;
+		font-family: $font-berlingske-serif;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: $font-weight-bold;
+		margin-top: 0;
+		font-family: $font-gotham;
+	}
+
+	@media #{$mobileOnly} {
+		.col-sm-4 {
+			margin-bottom: 40px;
+			&:last-child {
+				margin-bottom: 15px;
+			}
+		}
+
+		&:not(.red-background) {
+			overflow: inherit;
+
+			h2 {
+				margin-top: -61px;
+			}
+		}
+	}
+
+	@media #{$tabletUp} {
+		padding-bottom: 70px;
+		.col-xs-12 > .row {
+			margin-left: -$grid-gutter-width/2;
+			margin-right: -$grid-gutter-width/2;
+		}
+		.col-sm-4 {
+			padding-left: $grid-gutter-width/2;
+			padding-right: $grid-gutter-width/2;
+		}
+		h2 {
+			max-width: 690px;
+			line-height: 1.1;
+		}
+	}
+
+	@media #{$desktopUp} {
+		padding-bottom: 90px;
+
+		h2 {
+			max-width: 490px;
+			font-size: 50px;
+			margin-top: 40px;
+			margin-bottom: 60px;
+		}
+	}
+
+	@media #{$desktopExtra} {
+		.row {
+			.col-sm-4 {
+				> * {
+					//max-width: 460px;
+				}
+			}
+		}
+	}
+}

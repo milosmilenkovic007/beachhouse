@@ -1,0 +1,34 @@
+.module-four-thumbs {
+	@media #{$tabletDown} {
+		.text-in-md-thumb {
+			.heading-05 {
+				font-size: 11px;
+				line-height: 15px;
+			}
+		}
+
+		.col-xs-6 {
+			&:nth-child(odd) {
+				padding-right: 10px;
+				clear: left;
+			}
+			&:nth-child(even) {
+				padding-left: 10px;
+			}
+
+			&:nth-child(1),
+			&:nth-child(2) {
+				margin-bottom: 35px;
+			}
+		}
+	}
+
+	@media #{$desktopUp} {
+		.text-in-md-thumb {
+			.heading-05 {
+				font-size: 18px;
+				line-height: 26px;
+			}
+		}
+	}
+}

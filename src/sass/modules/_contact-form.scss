@@ -1,0 +1,381 @@
+.contact-form-module {
+	padding: 120px 0;
+	background-color: #323232;
+	color: #fff;
+
+	.contact-form-module-head {
+		margin: 0 0 50px;
+	}
+
+	.heading-03,
+	p {
+		display: inline-block;
+		text-shadow: none;
+	}
+
+	.heading-03 {
+		width: 100%;
+		font-size: 24px;
+		line-height: 34px;
+		font-weight: $font-weight-bold;
+		font-family: $font-gotham;
+		margin: 0 0 20px;
+	}
+
+	p {
+		font-size: 15px;
+		line-height: 22px;
+		margin: 0;
+	}
+
+	form {
+		@include pose(left, 100%);
+	}
+
+	.form-inner {
+		* {
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			border: none;
+			color: #323232;
+			font-size: 12px;
+			font-weight: $font-weight-medium;
+		}
+
+		input {
+			padding: 0 20px;
+			margin: 0 0 10px;
+			line-height: 50px;
+			height: 50px;
+		}
+
+		textarea {
+			height: 150px;
+			line-height: 34px;
+			margin: 0 0 10px;
+			padding: 8px 20px;
+		}
+	}
+
+	.submit-form {
+		display: inline-block;
+		vertical-align: top;
+		line-height: 48px;
+		padding: 0;
+		width: 100%;
+		border: solid 1px #fff;
+		background-color: transparent;
+		color: #fff;
+		font-size: 14px;
+		font-weight: $font-weight-medium;
+		border-radius: 0;
+
+		&:after {
+			content: '>';
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 15px;
+		}
+	}
+
+	.console-message {
+		display: inline-block;
+		line-height: 50px;
+		font-weight: bold;
+		width: 100%;
+		text-align: center;
+		padding: 0 15px;
+		background-color: #000;
+		margin-top: 10px;
+	}
+
+	@media #{$tabletUp} {
+		.submit-form {
+			width: 50%;
+			margin-right: 30px;
+		}
+
+		.console-message {
+			width: calc(50% - 34px);
+			margin-top: 0;
+		}
+	}
+
+	@media #{$desktopUp} {
+		p {
+			max-width: 50%;
+		}
+
+		.form-inner {
+			textarea {
+				max-width: 800px;
+				height: 230px;
+			}
+		}
+		.submit-form {
+			width: 300px;
+		}
+
+		.console-message {
+			width: calc(100% - 335px);
+		}
+	}
+
+	@media #{$desktopLargeUp} {
+		.console-message {
+			width: 468px;
+		}
+	}
+}
+
+#page.with-contact-overlay {
+	z-index: 9999;
+}
+
+.contact-form-overlay-container {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	top: 100%;
+	left: 100%;
+	z-index: 9999;
+	@include transition(all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94));
+
+	.contact-form-overlay-button {
+		position: absolute;
+		bottom: 0;
+		right: 20px;
+		cursor: pointer;
+		background-color: #cd181e;
+		color: #fff;
+		text-decoration: none;
+		white-space: nowrap;
+		padding: 10px 40px;
+		font-family: $font-gotham;
+		font-weight: bold;
+		font-size: 14px;
+		@include box-shadow(0 0 20px 5px rgba(0, 0, 0, 0.2));
+	}
+
+	.close-contact-form-overlay-button {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		z-index: 1;
+		color: #fff;
+		text-decoration: none;
+		font-family: $font-gotham;
+		font-weight: bold;
+		text-transform: uppercase;
+		vertical-align: middle;
+		font-size: 12px;
+		> span {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 10px;
+		}
+	}
+
+	.contact-form-module {
+		.container-fluid {
+			width: 100%;
+		}
+
+		.contact-form-header {
+			margin-bottom: 50px;
+		}
+
+		.cfo-label {
+			color: #fff;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+		#cfo-content {
+			max-height: 100px;
+			overflow: auto;
+			background-color: transparent;
+			border: 1px solid #fff;
+			color: #fff;
+			padding: 0 10px;
+			border-radius: 0 !important;
+
+			&::placeholder {
+				color: rgba(#fff, 0.8);
+			}
+		}
+
+		input[type='text'] {
+			color: #000;
+			line-height: 40px;
+			height: 40px;
+			padding: 0 10px;
+			border-radius: 0 !important;
+
+			&::placeholder {
+				color: rgba(#000, 0.5);
+			}
+		}
+
+		.submit-form {
+			width: 100%;
+			margin-top: 22px;
+			line-height: 40px;
+			height: 40px;
+			font-weight: bold;
+		}
+
+		.console-message {
+			width: 100%;
+			background-color: transparent;
+			text-align: left;
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+
+	.cfo-message {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		text-align: center;
+
+		p {
+			display: block;
+			margin: 10px 0;
+			width: 100%;
+			max-width: none;
+		}
+	}
+
+	&.open {
+		top: 0;
+		left: 0;
+		background-color: #ae0000;
+
+		.contact-form-module {
+			position: absolute;
+			top: 60px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 0;
+			padding: 20px 0;
+			overflow: auto;
+			background-color: #ae0000;
+			color: #fff;
+		}
+	}
+
+	@media #{$mobileOnly} {
+		.contact-form-overlay-button {
+			position: absolute;
+			right: 0px;
+			bottom: 20px;
+			@include transform(rotate(90deg));
+			@include transform-origin(right top);
+		}
+	}
+
+	@media #{$tabletUp} {
+		.contact-form-overlay-button {
+			margin-right: 20px;
+		}
+
+		.close-contact-form-overlay-button {
+			right: 30px;
+		}
+	}
+
+	@media #{$desktopUp} {
+		.contact-form-overlay-button {
+			margin-right: 20px;
+		}
+
+		.close-contact-form-overlay-button {
+			right: 40px;
+		}
+
+		&.open {
+			.contact-form-module {
+				padding-top: 60px;
+				.container-fluid {
+					max-width: 65%;
+				}
+			}
+		}
+	}
+}
+
+$cubic-bezier: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$translate-timming: 0.2s;
+$opaticy-transition-timming: 0.3s;
+$opaticy-transition-delay-timming: 0.4s;
+
+.animate-show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+	@include transition(opacity 0.35s);
+}
+
+.animate-show.ng-hide {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.as-otft,
+.as-otfb,
+.as-otfr,
+.as-otfl {
+	opacity: 1;
+	visibility: visible;
+	@include translate3d(0, 0, 0);
+}
+
+.as-otft.ng-hide-add.ng-hide-add-active,
+.as-otft.ng-hide-remove.ng-hide-remove-active,
+.as-otfb.ng-hide-add.ng-hide-add-active,
+.as-otfb.ng-hide-remove.ng-hide-remove-active,
+.as-otfl.ng-hide-add.ng-hide-add-active,
+.as-otfl.ng-hide-remove.ng-hide-remove-active .as-otfr.ng-hide-add.ng-hide-add-active,
+.as-otfr.ng-hide-remove.ng-hide-remove-active {
+	@include transition(
+		opacity $cubic-bezier $opaticy-transition-timming,
+		transform $cubic-bezier $translate-timming
+	);
+}
+
+.as-otfr.ng-hide {
+	opacity: 0;
+	visibility: hidden;
+	@include translate3d(30px, 0, 0);
+}
+
+.as-otfl.ng-hide {
+	opacity: 0;
+	visibility: hidden;
+	@include translate3d(-30px, 0, 0);
+}
+
+.as-otfb.ng-hide {
+	opacity: 0;
+	visibility: hidden;
+	@include translate3d(0, 30px, 0);
+}
+
+.as-otft.ng-hide {
+	opacity: 0;
+	visibility: hidden;
+	@include translate3d(0, -30px, 0);
+}

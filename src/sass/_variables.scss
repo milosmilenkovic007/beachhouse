@@ -1,0 +1,142 @@
+//== Fonts:
+$emBase: 10px;
+// $font-size-base:          14px !default;
+// $line-height-base:        1.428571429 !default; // 20/14
+$font-path: '../fonts' !default;
+// $gotham-font: "Gotham", Arial, Helvetica, sans-serif;
+
+//== Grid system
+//** Number of columns in the grid.
+$grid-columns: 12 !default;
+$grid-gutter-width: 32px;
+$grid-gutter-mobile-width: 20px;
+
+//== Media queries breakpoints
+// Extra small screen / phone
+// Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
+$screen-xs: 480px !default;
+$screen-xs-min: $screen-xs !default;
+$screen-phone: $screen-xs-min !default;
+
+// Extra small screen / phone
+// Note: Deprecated $screen-xs-2 and $screen-phone as of v3.0.1
+$screen-xs-2: 640px !default;
+$screen-xs-2-min: $screen-xs-2 !default;
+$screen-phone: $screen-xs-2-min !default;
+
+// Small screen / tablet
+// Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
+$screen-sm: 768px !default;
+// $screen-sm:                  640px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default;
+
+// Medium screen / desktop
+// Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
+$screen-md: 1024px !default;
+// $screen-md:                  768px !default;
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default;
+
+// Large screen / wide desktop
+// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
+$screen-lg: 1280px !default;
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
+
+// Extra Large screen / wide desktop
+$screen-xl: 1400px !default;
+$screen-xl-min: $screen-xl !default;
+$screen-xl-desktop: $screen-xl-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxs-max: ($screen-xs-min - 1) !default;
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+$screen-lg-max: ($screen-xl-min - 1) !default;
+
+// Media queries
+$xSmall: '(min-width: #{$screen-xs-min})';
+$xSmall2: '(min-width: #{$screen-xs-2-min})';
+$small: '(min-width: #{$screen-sm-min})';
+$medium: '(min-width: #{$screen-md-min})';
+$large: '(min-width: #{$screen-lg-min})';
+$xLarge: '(min-width: #{$screen-xl-min})';
+$smallDown: '(max-width: #{$screen-sm-max})';
+$xSmallDown: '(max-width: #{$screen-xs-max})';
+$xxSmallDown: '(max-width: #{$screen-xxs-max})';
+// $onlyShort: "(max-height: #{$screen-short})";
+// $onlyTinyShort: "(max-height: #{$screen-short}) and ( max-width: #{($screen-xs-min - 1)} )"; // iphone 4 - portrait - safari browser
+$landscape: '(orientation: landscape)';
+$portrait: '(orientation: portrait)';
+$screen-extra: 1920px;
+
+// MEDIA QUERY BY NAME
+$mobileOnly320: '(max-width: 320px)'; // 320
+$mobileOnly: '(max-width: #{$screen-xs-max})'; // < 768
+$tabletOnly: '(min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})'; // 768 <= width < 1024
+$tabletDown: '(max-width: #{$screen-sm-max})'; // < 1024
+$tabletUp: '(min-width: #{$screen-sm-min})'; // >= 768
+$desktopUp: '(min-width: #{$screen-md-min})'; // >= 1024
+$desktopLargeUp: '(min-width: #{$screen-lg-min})'; // >= 1280
+$desktopXLargeUp: '(min-width: #{$screen-xl-min})'; // >= 1400
+$desktopExtra: '(min-width: #{$screen-extra})'; // >= 1400
+
+// COLORS:
+$brand-primary: #1e1e1e;
+$link-color: #fff;
+$link-active-color: #fff;
+$text-color: #1e1e1e;
+$gray-color: #595959;
+$gray-color-light: #a7a7a7;
+$gray-color-text: #82776e;
+$grey-dark: #505050;
+$grey-light-dark: #b4b4b4;
+$grey-light: #d5d5d5;
+$grey-lighter: #e5e5e5;
+// $red-dark: #ce181e;
+$red-dark: #cd181e;
+$gray-background: #e6e6e6;
+$black-dark:#000000;
+$black-light:#191919de;
+$white-full:#ffffff;
+$dark-blue:#0e1f33;
+
+// SPACINGS
+$space-small: 30px;
+$space-medium: 50px;
+$space-big: 70px;
+$space-bigger: 120px;
+$space-biggest: 200px;
+
+// TYPOGRAPHY
+$font-berlingske-serif: 'Berlingske Serif';
+$font-seanor:'Seanor';
+//$font-gotham: "Gotham";
+$font-gotham-a: 'Gotham A';
+$font-gotham: 'Gotham A', 'Gotham B';
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-book: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-demibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-style-italic: italic;
+
+// SLICK
+$slick-font-path: './fonts/';
+$slick-font-family: 'slick';
+$slick-loader-path: '../img/';
+
+// MISC
+$page-duration-default: 0.8s;
+$container-padding: 20px;
+$container-padding-desktop: 34px;
+$container-padding-desktopL: 60px;
+$header-height: 60px;
+$header-height-desktop: 70px;
+// $nav-width-mobile: 79.7%;
+// $text-width: 620px;

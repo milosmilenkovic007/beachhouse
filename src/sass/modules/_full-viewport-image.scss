@@ -1,0 +1,17 @@
+.module-contact_download_module {
+	+ .module-full-viewport-image {
+		.module__fixed {
+			z-index: auto;
+		}
+	}
+}
+
+.module-full-viewport-image {
+	img {
+		width: 100%;
+	}
+
+	.super-img {
+		height: calc(100vh - #{$header-height-desktop});
+	}
+}

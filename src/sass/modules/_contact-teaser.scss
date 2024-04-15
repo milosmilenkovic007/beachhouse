@@ -1,0 +1,140 @@
+.module-contact-teaser {
+	position: relative;
+	z-index: 1;
+
+	.wrap-img,
+	.description {
+		/*position: relative;
+    float: left;*/
+		padding-left: 20px;
+	}
+
+	.background-box {
+		position: relative;
+		float: left;
+		width: 100%;
+		background-color: $gray-background;
+		margin-right: -20px;
+		@include calc(width, '100% + 20px');
+		padding: 20px 20px 15px 0;
+	}
+
+	/*.super-img {
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+    padding: 0;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 115%;
+    }
+  }*/
+
+	/*.wrap-img {
+    img {
+      width: 100%;
+    }
+  }*/
+
+	.description {
+		* {
+			//display: inline-block;
+		}
+
+		h3,
+		p {
+			margin: 0 0 15px;
+		}
+
+		h3 {
+			font-family: $font-gotham;
+			font-weight: $font-weight-bold;
+			font-size: 16px;
+			line-height: 17px;
+			width: 100%;
+		}
+
+		p {
+			width: 100%;
+		}
+
+		a:hover {
+			color: $brand-primary;
+		}
+
+		.type--infor {
+			p {
+				margin: 0;
+			}
+			a {
+				display: inline-block;
+				text-decoration: none;
+
+				&[href*='mailto'] {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	@media #{$tabletDown} {
+		.wrap-img {
+			width: 50%;
+			margin-bottom: 18px;
+		}
+
+		.description {
+			* {
+				width: 100%;
+			}
+
+			a {
+				width: auto;
+			}
+		}
+	}
+
+	@media #{$desktopUp} {
+		.wrap-img,
+		.description {
+			padding: 0 16px;
+			float: left;
+		}
+
+		.background-box {
+			//margin-right: -$container-padding-desktop;
+			padding-right: $container-padding-desktop;
+			@include calc(width, '100% + 34px');
+			@include calc(padding-top, '1/12 * 100vw');
+			@include calc(padding-bottom, '1/12 * 100vw');
+		}
+
+		.wrap-img {
+			@include calc(width, '3/8 * 100%');
+			@include calc(margin-left, '1/8 * 100%');
+		}
+
+		.description {
+			width: 50%;
+
+			h3 {
+				font-size: 18px;
+				line-height: 22px;
+				margin: 0 0 20px;
+			}
+
+			p {
+				margin: 0 0 20px;
+			}
+		}
+	}
+
+	@media #{$desktopLargeUp} {
+		.background-box {
+			margin-right: -$container-padding-desktopL;
+			padding-right: $container-padding-desktopL;
+		}
+	}
+}

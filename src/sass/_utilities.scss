@@ -1,0 +1,176 @@
+// UTILITIES
+
+.clearfix {
+	@include clearfix;
+}
+
+%backface-perspective {
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+}
+
+%backface-hidden {
+	@include backface-visibility(hidden);
+}
+
+@mixin noFlick() {
+	@include backface-visibility(hidden);
+	@include perspective(1000px);
+}
+%no-flick {
+	@include noFlick;
+}
+
+.is-3d {
+	@include translate3d(0, 0, 0);
+}
+
+/* Overthrow CSS:
+   Enable overflow: auto on elements with overthrow class when html element has overthrow class too */
+@mixin overthrow() {
+	.overthrow-enabled & {
+		// @extend %dark-scrollbar;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-scroll-chaining: none;
+		// -ms-overflow-style: -ms-autohiding-scrollbar;
+		> * {
+			-webkit-transform: translateZ(0px);
+		}
+	}
+}
+.overthrow {
+	@include overthrow();
+}
+
+%absolute-full {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+@mixin text-truncate {
+	overflow: hidden;
+	o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+%text-truncate {
+	@include text-truncate;
+}
+
+%noTransition {
+	@include transition(none !important);
+}
+
+@mixin touch-action-auto() {
+	-webkit-touch-action: auto !important;
+	-moz-touch-action: auto !important;
+	-ms-touch-action: auto !important;
+	-o-touch-action: auto !important;
+	touch-action: auto !important;
+}
+@mixin touch-action-pan-y() {
+	-webkit-touch-action: pan-y !important;
+	-moz-touch-action: pan-y !important;
+	-ms-touch-action: pan-y !important;
+	-o-touch-action: pan-y !important;
+	touch-action: pan-y !important;
+}
+@mixin touch-action-none() {
+	-webkit-touch-action: none !important;
+	-moz-touch-action: none !important;
+	-ms-touch-action: none !important;
+	-o-touch-action: none !important;
+	touch-action: none !important;
+}
+@mixin user-drag-auto() {
+	-webkit-user-drag: auto !important;
+	-moz-user-drag: auto !important;
+	-ms-user-drag: auto !important;
+	-o-user-drag: auto !important;
+	user-drag: auto !important;
+}
+@mixin user-drag-none() {
+	-webkit-user-drag: none !important;
+	-moz-user-drag: none !important;
+	-ms-user-drag: none !important;
+	-o-user-drag: none !important;
+	user-drag: none !important;
+}
+@mixin user-select-auto() {
+	-webkit-touch-callout: auto;
+	-webkit-user-select: auto !important;
+	-moz-user-select: auto !important;
+	-ms-user-select: auto !important;
+	-o-user-select: auto !important;
+	user-select: auto !important;
+}
+@mixin user-select-none() {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	-o-user-select: none !important;
+	user-select: none !important;
+}
+%touch-action-auto {
+	@include touch-action-auto;
+}
+%touch-action-pan-y {
+	@include touch-action-pan-y;
+}
+%touch-action-none {
+	@include touch-action-none;
+}
+%user-drag-auto {
+	@include user-drag-auto;
+}
+%user-drag-none {
+	@include user-drag-none;
+}
+%user-select-auto {
+	@include user-select-auto;
+}
+%user-select-none {
+	@include user-select-none;
+}
+
+@mixin hidden() {
+	visibility: hidden;
+	opacity: 0;
+}
+
+@mixin unHidden() {
+	visibility: visible;
+	opacity: 1;
+}
+
+@mixin hideAway() {
+	@include transform(translateY(-999rem));
+}
+
+@mixin unHideAway() {
+	@include transform(translateY(0));
+}
+
+%valign-middle-container {
+	&:before {
+		content: '';
+		vertical-align: middle;
+		width: 0;
+		height: 100%;
+		overflow: hidden;
+		display: inline-block;
+	}
+	> * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.valign-middle-container {
+	@extend %valign-middle-container;
+}
